@@ -29,3 +29,4 @@ export class AppComponent {
     return Math.round(Math.random() * 10000);
   }
 }
+//https://http-project-6daba.firebaseio.com
