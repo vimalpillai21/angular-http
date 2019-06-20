@@ -28,6 +28,7 @@ constructor(private serverService: ServerService){}
       id: this.generateId()
     });
   }
+  appName = this.serverService.getAppName();
   private generateId() {
     return Math.round(Math.random() * 10000);
   }
