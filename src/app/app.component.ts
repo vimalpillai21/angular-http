@@ -36,8 +36,8 @@ constructor(private serverService: ServerService){}
     .subscribe(
       (response: Response) =>{
           console.log(response);
-          // const data = response.json();
-          // console.log(data);  
+          const data = response.json();
+          console.log(data);  
 
       },
       (error) => {
@@ -48,9 +48,8 @@ constructor(private serverService: ServerService){}
   onGet(){
     this.serverService.getServers()
     .subscribe(
-      (response: Response) =>{
-        const data = response.json();  
-        console.log(data);
+      (servers: any[]) =>{
+        console.log(servers);
       },
       (error) => {
         console.log(error);
