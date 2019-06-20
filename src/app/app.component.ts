@@ -34,8 +34,11 @@ constructor(private serverService: ServerService){}
   onSave(){
     this.serverService.storeServers(this.servers)
     .subscribe(
-      (response) =>{
+      (response: Response) =>{
           console.log(response);
+          // const data = response.json();
+          // console.log(data);  
+
       },
       (error) => {
         console.log(error);

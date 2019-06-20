@@ -5,8 +5,10 @@ import { Http, Headers } from "@angular/http";
 export class ServerService{
     constructor(private http:Http){}
     storeServers(servers:any[]){
-        const header = new Headers({'Content-Typ':'vimal'})
-        return this.http.post('https://http-project-6daba.firebaseio.com/data.json',
+        const header = new Headers({'Content-Type':'application/json'})
+        // return this.http.post('https://http-project-6daba.firebaseio.com/data.json',
+        // servers,{headers: header});
+        return this.http.put('https://http-project-6daba.firebaseio.com/data.json',
         servers,{headers: header});
     }
     getServers(){
